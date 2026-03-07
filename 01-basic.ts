@@ -20,12 +20,34 @@ let sentence: string = `Hello, My name is ${fullName} and i'll be ${age + 1} nex
 console.log(sentence);
 
 // BigInt
-const bigNumber: bigint = 90078912345678919n;
-const hugNumber = BigInt(90078912345678919); // Alternetive syntex
+// const bigNumber: bigint = 90078912345678919n;
+// const hugNumber = BigInt(90078912345678919); // Alternetive syntex
 
-// Symbol
-const uniqueKey: symbol = Symbol("description");
-const obj = {
-  [uniqueKey]: "This is a unique property",
-};
-console.log(obj[uniqueKey]);
+// // Symbol
+// const uniqueKey: symbol = Symbol("description");
+// const obj = {
+//   [uniqueKey]: "This is a unique property",
+// };
+// console.log(obj[uniqueKey]);
+
+// Type - any
+let v: any = true;
+v = "string";
+Math.round(v);
+
+// Type - Unknown
+function proccessValue(value: unknown) {
+  if (typeof value === "string") {
+    console.log(value.toUpperCase());
+  } else if (Array.isArray(value)) {
+    console.log(value.length);
+  }
+}
+
+proccessValue([1, 2, 3, 4]);
+
+// Type - Never
+// 1. function that never returns
+function throwError(message: string): never {
+  throw new Error(message);
+}

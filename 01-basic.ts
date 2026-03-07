@@ -86,3 +86,27 @@ if (true) {
   const PI: number = 3.14;
   console.log(PI);
 }
+
+// Conditional operator
+var num: number = -2;
+var result = num > 0 ? "Positive number." : "Negative number.";
+console.log(result);
+
+// Type Operators
+var num = 12;
+console.log(typeof num);
+
+// Boolean - Conditional Expression
+let age1: number = 25;
+let isAdult: boolean = age >= 18;
+if (isAdult) {
+  console.log("You are an Adult.");
+} else {
+  console.log("You are not an adult.");
+}
+
+// Conditional statement - (Ternary operator)
+let score: number = 80;
+let isPassing: boolean = score >= 70;
+let result1: string = isPassing ? "Pass" : "Fail";
+console.log(result1);

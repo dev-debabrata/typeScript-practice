@@ -47,7 +47,7 @@ function proccessValue(value: unknown) {
 proccessValue([1, 2, 3, 4]);
 
 // Type - Never
-// 1. function that never returns
+// 1. Function that never returns
 function throwError(message: string): never {
   throw new Error(message);
 }

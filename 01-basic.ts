@@ -51,3 +51,38 @@ proccessValue([1, 2, 3, 4]);
 function throwError(message: string): never {
   throw new Error(message);
 }
+
+///////////////////////////////////////////////
+// let and const
+
+// let
+let car_name: string = "BMW";
+let car_price: number = 10000000;
+console.log(car_name);
+console.log(car_price);
+
+let bool: boolean = true;
+if (bool) {
+  let result: number = 10;
+  console.log(result);
+}
+
+let bool1: boolean = false;
+if (bool1) {
+  let num: number = 1;
+  console.log(num);
+} else {
+  let num: number = 2;
+  console.log(num);
+}
+
+// Const
+const lang: string = "TypeScript";
+const pi: number = 3.14;
+console.log(`Language: ${lang}`);
+console.log(`Value of PI: ${pi}`);
+
+if (true) {
+  const PI: number = 3.14;
+  console.log(PI);
+}

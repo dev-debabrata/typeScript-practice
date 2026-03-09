@@ -48,3 +48,19 @@ const multiply = (x: number, y: number): number => {
 };
 
 console.log(multiply(5, 6));
+
+// Arrow Function without Parameter
+const greet = () => {
+  return "Hello World";
+};
+console.log(greet());
+
+// Arrow Funtion with Multiple Parameter
+let sum: number;
+const add = (a: number, b: number, c: number) => {
+  sum = a + b + c;
+  return sum;
+};
+
+let result = add(10, 20, 30);
+console.log("The Result is: " + result);

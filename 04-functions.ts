@@ -21,3 +21,8 @@ function addNumbers(...nums: number[]) {
 
 addNumbers(1, 2, 3);
 addNumbers(10, 20, 30, 40);
+
+// Function Constractor
+let myFunction = new Function("a", "b", "return a * b");
+let x = myFunction(4, 3);
+console.log(x);

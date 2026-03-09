@@ -26,3 +26,25 @@ addNumbers(10, 20, 30, 40);
 let myFunction = new Function("a", "b", "return a * b");
 let x = myFunction(4, 3);
 console.log(x);
+
+// Recursion & TypeScript Functions
+// function factorial(number) {
+//   if (number <= 0) {
+//     return 1;
+//   } else {
+//     return number * factorial(number - 1);
+//   }
+// }
+// console.log(factorial(6));
+
+// Lambda Function
+let foo = (x: number) => 10 + x;
+console.log(foo(100));
+
+// Arrow Function with Parameter
+const multiply = (x: number, y: number): number => {
+  let res: number = x * y;
+  return res;
+};
+
+console.log(multiply(5, 6));

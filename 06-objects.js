@@ -2,21 +2,13 @@
 //   name: "Debu",
 //   age: 25,
 // };
-
-interface Person {
-  firstName: string;
-  lastName: string;
-  sayHi: () => string;
-}
-
-let employee: Person = {
-  firstName: "Debabrata Das",
-  lastName: "Das",
-  sayHi: (): string => {
-    return "Hi there!";
-  },
+var employee = {
+    firstName: "Debabrata Das",
+    lastName: "Das",
+    sayHi: function () {
+        return "Hi there!";
+    },
 };
-
 console.log("Employee Object");
 console.log(employee.firstName);
 console.log(employee.lastName);

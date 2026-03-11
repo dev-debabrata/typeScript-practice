@@ -77,3 +77,10 @@ var product = {
 };
 console.log(product.featured);
 console.log(product.reviews);
+var dog = {
+    name: "Buddy",
+    makeSound: function () {
+        console.log("woof woof!");
+    },
+};
+dog.makeSound();

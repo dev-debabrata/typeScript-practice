@@ -194,3 +194,22 @@ const product: FeauturedProduct = {
 
 console.log(product.featured);
 console.log(product.reviews);
+
+// Overriding Properties and Methods
+interface Animal {
+  name: string;
+  makeSound(): void;
+}
+
+interface Dog extends Animal {
+  makeSound(): void;
+}
+
+const dog: Dog = {
+  name: "Buddy",
+  makeSound() {
+    console.log("woof woof!");
+  },
+};
+
+dog.makeSound();

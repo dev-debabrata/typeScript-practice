@@ -94,3 +94,22 @@ interface Child extends Parent1, Parent2 {}
 
 const obj: Child = { v1: 12, v2: 23 };
 console.log("Value 1: " + obj.v1 + "Value 2: " + obj.v2);
+
+// Extending Interface
+interface Shape {
+  color: string;
+}
+
+interface ColoredShape extends Shape {
+  name: string;
+}
+
+const square: ColoredShape = {
+  color: "red",
+  name: "square",
+};
+
+console.log(square.color);
+console.log(square.name);
+
+//

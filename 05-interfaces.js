@@ -60,3 +60,20 @@ var printer = new Printer();
 printer.print();
 printer.scan();
 printer.copy();
+var user = {
+    name: "Debabrata Das",
+    age: 25,
+    greet: function () {
+        console.log("Hello, my name is $".concat(this.name, " and i'm ").concat(this.age, " year old."));
+    },
+};
+user.greet();
+var product = {
+    name: "Smartphone",
+    price: 50000,
+    discount: 30,
+    reviews: ["Greet product!", "Highly recommended."],
+    featured: true,
+};
+console.log(product.featured);
+console.log(product.reviews);

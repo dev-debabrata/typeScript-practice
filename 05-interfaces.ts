@@ -143,3 +143,54 @@ const printer = new Printer();
 printer.print();
 printer.scan();
 printer.copy();
+
+// Enhanching and Exsting Interface
+interface User {
+  name: string;
+}
+
+interface EnhancedUser extends User {
+  age: number;
+  greet(): void;
+}
+
+const user: EnhancedUser = {
+  name: "Debabrata Das",
+  age: 25,
+  greet() {
+    console.log(
+      `Hello, my name is $${this.name} and i'm ${this.age} year old.`,
+    );
+  },
+};
+
+user.greet();
+
+// Creating Composite Interfaces
+interface Product {
+  name: string;
+  price: number;
+}
+
+interface DiscountedProduct extends Product {
+  discount: number;
+}
+
+interface ProductWithReviews extends Product {
+  reviews: string[];
+}
+
+interface FeauturedProduct extends DiscountedProduct, ProductWithReviews {
+  featured: boolean;
+}
+
+const product: FeauturedProduct = {
+  name: "Smartphone",
+  price: 50000,
+  discount: 30,
+  reviews: ["Greet product!", "Highly recommended."],
+  featured: true,
+};
+
+console.log(product.featured);
+console.log(product.reviews);

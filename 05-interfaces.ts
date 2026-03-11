@@ -64,3 +64,33 @@ let ageList: ages = {
 
 console.log(list2[0]);
 console.log(ageList["Debabrata"]);
+
+// Simple Interface Inheritance
+interface Person1 {
+  age: number;
+}
+
+interface Musician extends Person1 {
+  intrument: string;
+}
+
+let drummer = <Musician>{};
+drummer.age = 27;
+drummer.intrument = "Drummes";
+
+console.log("Age: " + drummer.age);
+console.log("Instrument: " + drummer.intrument);
+
+// Multiple Interface
+interface Parent1 {
+  v1: number;
+}
+
+interface Parent2 {
+  v2: number;
+}
+
+interface Child extends Parent1, Parent2 {}
+
+const obj: Child = { v1: 12, v2: 23 };
+console.log("Value 1: " + obj.v1 + "Value 2: " + obj.v2);

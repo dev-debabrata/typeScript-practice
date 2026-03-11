@@ -22,3 +22,15 @@ options = {
 };
 var fn = options.commandLine;
 console.log(fn());
+var list2 = ["Debabrata", "Das"];
+var ageList = {
+    Debabrata: 25,
+    Das: 30,
+};
+console.log(list2[0]);
+console.log(ageList["Debabrata"]);
+var drummer = {};
+drummer.age = 27;
+drummer.intrument = "Drummes";
+console.log("Age: " + drummer.age);
+console.log("Instrument: " + drummer.intrument);

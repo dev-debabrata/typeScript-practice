@@ -112,4 +112,34 @@ const square: ColoredShape = {
 console.log(square.color);
 console.log(square.name);
 
-//
+// Extending a Multiple Interface
+interface Printable {
+  print(): void;
+}
+
+interface Scanable {
+  scan(): void;
+}
+
+interface MultifuntionalDevice extends Printable, Scanable {
+  copy(): void;
+}
+
+class Printer implements MultifuntionalDevice {
+  print() {
+    console.log("Printing...");
+  }
+
+  scan() {
+    console.log("Scanning...");
+  }
+
+  copy() {
+    console.log("Copying...");
+  }
+}
+
+const printer = new Printer();
+printer.print();
+printer.scan();
+printer.copy();

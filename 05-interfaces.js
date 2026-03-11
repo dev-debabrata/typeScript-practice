@@ -34,3 +34,29 @@ drummer.age = 27;
 drummer.intrument = "Drummes";
 console.log("Age: " + drummer.age);
 console.log("Instrument: " + drummer.intrument);
+var obj = { v1: 12, v2: 23 };
+console.log("Value 1: " + obj.v1 + "Value 2: " + obj.v2);
+var square = {
+    color: "red",
+    name: "square",
+};
+console.log(square.color);
+console.log(square.name);
+var Printer = /** @class */ (function () {
+    function Printer() {
+    }
+    Printer.prototype.print = function () {
+        console.log("Printing...");
+    };
+    Printer.prototype.scan = function () {
+        console.log("Scanning...");
+    };
+    Printer.prototype.copy = function () {
+        console.log("Copying...");
+    };
+    return Printer;
+}());
+var printer = new Printer();
+printer.print();
+printer.scan();
+printer.copy();

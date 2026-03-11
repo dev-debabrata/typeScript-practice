@@ -45,3 +45,22 @@ options = {
 
 let fn: any = options.commandLine;
 console.log(fn());
+
+// Interface Array
+interface nameList {
+  [index: number]: string;
+}
+
+let list2: nameList = ["Debabrata", "Das"];
+
+interface ages {
+  [index: string]: number;
+}
+
+let ageList: ages = {
+  Debabrata: 25,
+  Das: 30,
+};
+
+console.log(list2[0]);
+console.log(ageList["Debabrata"]);

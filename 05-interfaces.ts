@@ -213,3 +213,39 @@ const dog: Dog = {
 };
 
 dog.makeSound();
+
+// Interface
+interface Car {
+  make: string;
+  model: string;
+  year: number;
+}
+
+const myCar: Car = {
+  make: "BMW",
+  model: "M5",
+  year: 2025,
+};
+console.log(myCar);
+
+// Interface in Class
+interface Employee {
+  name: string;
+  age: number;
+  position: string;
+}
+
+class Manager implements Employee {
+  name: string;
+  age: number;
+  position: string;
+
+  constructor(name: string, age: number, position: string) {
+    this.name = name;
+    this.age = age;
+    this.position = position;
+  }
+}
+
+const manager = new Manager("Debabrata Das", 25, "Project Manager");
+console.log(manager);

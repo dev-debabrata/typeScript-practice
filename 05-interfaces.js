@@ -84,3 +84,19 @@ var dog = {
     },
 };
 dog.makeSound();
+var myCar = {
+    make: "BMW",
+    model: "M5",
+    year: 2025,
+};
+console.log(myCar);
+var Manager = /** @class */ (function () {
+    function Manager(name, age, position) {
+        this.name = name;
+        this.age = age;
+        this.position = position;
+    }
+    return Manager;
+}());
+var manager = new Manager("Debabrata Das", 25, "Project Manager");
+console.log(manager);

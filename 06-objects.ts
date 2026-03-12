@@ -83,3 +83,20 @@ const myBook: Book = {
 console.log(
   `${myBook.title} written by ${myBook.author.name} and birthday year is ${myBook.author.birthYear}.`,
 );
+
+// Function Parameter with Object Type
+interface Rectangle {
+  width: number;
+  height: number;
+}
+
+function calculateArea(rec: Rectangle): number {
+  return rec.width * rec.height;
+}
+
+const myRectangle: Rectangle = {
+  width: 10,
+  height: 5,
+};
+
+console.log(`Area: ${calculateArea(myRectangle)}`);

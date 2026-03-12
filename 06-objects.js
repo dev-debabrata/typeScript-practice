@@ -38,3 +38,11 @@ var myBook = {
     generation: "5th",
 };
 console.log("".concat(myBook.title, " written by ").concat(myBook.author.name, " and birthday year is ").concat(myBook.author.birthYear, "."));
+function calculateArea(rec) {
+    return rec.width * rec.height;
+}
+var myRectangle = {
+    width: 10,
+    height: 5,
+};
+console.log("Area: ".concat(calculateArea(myRectangle)));

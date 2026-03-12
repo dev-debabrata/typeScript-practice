@@ -100,3 +100,23 @@ var Manager = /** @class */ (function () {
 }());
 var manager = new Manager("Debabrata Das", 25, "Project Manager");
 console.log(manager);
+var product2 = {
+    id: 1,
+    name: "Laptop",
+    price: 50000,
+};
+console.log(product2);
+var SimpleCalculator = /** @class */ (function () {
+    function SimpleCalculator() {
+    }
+    SimpleCalculator.prototype.add = function (a, b) {
+        return a + b;
+    };
+    SimpleCalculator.prototype.subtractor = function (a, b) {
+        return a - b;
+    };
+    return SimpleCalculator;
+}());
+var calc = new SimpleCalculator();
+console.log(calc.add(5, 3));
+console.log(calc.subtractor(9, 5));

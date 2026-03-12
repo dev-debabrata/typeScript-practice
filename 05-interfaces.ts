@@ -249,3 +249,37 @@ class Manager implements Employee {
 
 const manager = new Manager("Debabrata Das", 25, "Project Manager");
 console.log(manager);
+
+// Interface for an Object
+interface Product2 {
+  id: number;
+  name: string;
+  price: number;
+}
+
+const product2: Product2 = {
+  id: 1,
+  name: "Laptop",
+  price: 50000,
+};
+
+console.log(product2);
+
+// Interface with Method Signatures
+interface Calculator {
+  add(a: number, b: number): number;
+  subtractor(a: number, b: number): number;
+}
+
+class SimpleCalculator implements Calculator {
+  add(a: number, b: number): number {
+    return a + b;
+  }
+  subtractor(a: number, b: number): number {
+    return a - b;
+  }
+}
+
+const calc = new SimpleCalculator();
+console.log(calc.add(5, 3));
+console.log(calc.subtractor(9, 5));

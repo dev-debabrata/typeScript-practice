@@ -64,3 +64,21 @@ class Person {
 
 const person = new Person("123-45-6789");
 console.log(person.getSSN());
+
+// Protected Access Modifier
+class User {
+  protected age: number;
+
+  constructor(age: number) {
+    this.age = age;
+  }
+}
+
+class Employee extends User {
+  public getRetirementAge(): number {
+    return this.age + 65;
+  }
+}
+
+const empRetirement = new Employee(30);
+console.log(empRetirement.getRetirementAge());

@@ -74,3 +74,21 @@ class BankAccount {
 const account = new BankAccount("Debabrata Das", 10000);
 account.deposit(5000);
 console.log(account.getBalance());
+
+// Representing a Rectangle in Class
+class Rectangle {
+  width: number;
+  height: number;
+
+  constructor(width: number, height: number) {
+    this.width = width;
+    this.height = height;
+  }
+
+  calculateArea(): number {
+    return this.width * this.height;
+  }
+}
+
+const rec = new Rectangle(10, 20);
+console.log(`Area of Rectangle: ${rec.calculateArea()}`);

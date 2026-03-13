@@ -1,3 +1,4 @@
+// Access Modifier Public, Private, Protected
 class Animal {
   public name: string;
   private age: number;
@@ -31,3 +32,35 @@ const myDog = new Dog("Buddy", 3);
 console.log(myDog.name);
 console.log(myDog.getInfo());
 console.log(myDog.getDetails());
+
+// Public Access Modifier
+class Animal1 {
+  public name: string;
+
+  constructor(name: string) {
+    this.name = name;
+  }
+
+  public makeSound(): void {
+    console.log(`${this.name} makes sound.`);
+  }
+}
+
+const dog = new Animal1("Dog");
+dog.makeSound();
+
+// Private Access Modifier
+class Person {
+  private ssn: string;
+
+  constructor(ssn: string) {
+    this.ssn = ssn;
+  }
+
+  public getSSN(): string {
+    return this.ssn;
+  }
+}
+
+const person = new Person("123-45-6789");
+console.log(person.getSSN());

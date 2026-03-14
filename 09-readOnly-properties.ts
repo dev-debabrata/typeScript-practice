@@ -13,3 +13,12 @@ class ReadonlyExample {
 
 const obj = new ReadonlyExample("Debu");
 console.log(obj.getName());
+
+// Immutable Point coordinates
+interface Point {
+  readonly x: number;
+  readonly y: number;
+}
+
+const p1: Point = { x: 10, y: 20 };
+console.log(`Point Coordinate: ${p1.x}, ${p1.y}`);

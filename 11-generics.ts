@@ -51,6 +51,7 @@ function getLength<T extends { length: number }>(arg: T): number {
 console.log(getLength("Hello"));
 console.log(getLength([10, 20, 30]));
 
+////////////////// Generic Function //////////////////
 // Generic Function with Single type Parameter
 function displayPrint<T>(arg: T): T {
   return arg;
@@ -87,3 +88,60 @@ const words: string[] = ["Hello", "Wold"];
 const mergedArray: (number | string)[] = mergeArrays(numbers, words);
 
 console.log(mergedArray);
+
+///////////////// Basic Generic Class ///////////////////
+class Box<T> {
+  private content: T;
+
+  constructor(content: T) {
+    this.content = content;
+  }
+
+  getContent(): T {
+    return this.content;
+  }
+}
+
+const numBox = new Box<number>(100);
+console.log("Number content: ", numBox.getContent());
+
+const strBox = new Box<string>("Hello, TypeScript Generics!");
+console.log("String content: ", strBox.getContent());
+
+// Generic Constraints in Class
+class Box1<T extends number> {
+  private value: T;
+
+  constructor(value: T) {
+    this.value = value;
+  }
+
+  double(): number {
+    return this.value * 2;
+  }
+}
+
+const numBox1 = new Box1(10);
+console.log("Double value: ", numBox1.double());
+
+// Multiple Type Parameters in Generic Class
+class Pair<K, V> {
+  private key: K;
+  private value: V;
+
+  constructor(key: K, value: V) {
+    this.key = key;
+    this.value = value;
+  }
+
+  getKey(): K {
+    return this.key;
+  }
+
+  getValue(): V {
+    return this.value;
+  }
+}
+
+const userPair = new Pair<number, string>(1, "Debu");
+console.log("Key: ", userPair.getKey(), "Value: ", userPair.getValue());

@@ -43,6 +43,7 @@ function getLength(arg) {
 }
 console.log(getLength("Hello"));
 console.log(getLength([10, 20, 30]));
+////////////////// Generic Function //////////////////
 // Generic Function with Single type Parameter
 function displayPrint(arg) {
     return arg;
@@ -72,3 +73,45 @@ var numbers = [1, 2, 3, 4];
 var words = ["Hello", "Wold"];
 var mergedArray = mergeArrays(numbers, words);
 console.log(mergedArray);
+///////////////// Basic Generic Class ///////////////////
+var Box = /** @class */ (function () {
+    function Box(content) {
+        this.content = content;
+    }
+    Box.prototype.getContent = function () {
+        return this.content;
+    };
+    return Box;
+}());
+var numBox = new Box(100);
+console.log("Number content: ", numBox.getContent());
+var strBox = new Box("Hello, TypeScript Generics!");
+console.log("String content: ", strBox.getContent());
+// Generic Constraints in Class
+var Box1 = /** @class */ (function () {
+    function Box1(value) {
+        this.value = value;
+    }
+    Box1.prototype.double = function () {
+        return this.value * 2;
+    };
+    return Box1;
+}());
+var numBox1 = new Box1(10);
+console.log("Double value: ", numBox1.double());
+// Multiple Type Parameters in Generic Class
+var Pair = /** @class */ (function () {
+    function Pair(key, value) {
+        this.key = key;
+        this.value = value;
+    }
+    Pair.prototype.getKey = function () {
+        return this.key;
+    };
+    Pair.prototype.getValue = function () {
+        return this.value;
+    };
+    return Pair;
+}());
+var userPair = new Pair(1, "Debu");
+console.log("Key: ", userPair.getKey(), "Value: ", userPair.getValue());
